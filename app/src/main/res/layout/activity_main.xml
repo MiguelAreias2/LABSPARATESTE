@@ -87,7 +87,7 @@
             android:layout_margin="10dp"
             android:layout_height="wrap_content"
             android:onClick="button3"
-            android:text="button"/>
+            android:text="New Activity"/>
     </LinearLayout>
 
 
