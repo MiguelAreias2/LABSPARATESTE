@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // add method d
         //feito
+
         Toast.makeText(this, R.string.welcome, Toast.LENGTH_SHORT).show()
     }
 }
