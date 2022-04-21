@@ -6,59 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Hello World!" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Hello World!" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Hello World!" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Hello World!" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Hello World!" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Hello World!" />
-
         <EditText
-            android:id="@+id/editTextPersonName"
-            android:layout_width="wrap_content"
+            android:id="@+id/etPreco"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="something"/>
-
+            android:layout_margin="10dp"
+            android:text="Hello World!" />
+        <EditText
+            android:id="@+id/etQuantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Hello World!" />
+        <TextView
+            android:id="@+id/tvPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Hello World!" />
+        <CheckBox
+            android:id="@+id/cbIva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Hello World!" />
         <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:onClick="button1"
-        android:layout_alignParentRight="true"
-        android:text="button"
-        />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/botao"
+            android:onClick="calculaPagamento"/>
+
     </LinearLayout>
 
 
@@ -66,29 +48,7 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"
-            android:text="button"/>
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"
-            android:onClick="button3"
-            android:text="New Activity"/>
-    </LinearLayout>
 
 
 </RelativeLayout>

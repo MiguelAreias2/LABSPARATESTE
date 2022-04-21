@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -16,26 +17,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //adicionei o metodo A
+        Toast.makeText(this,R.string.mensagem,Toast.LENGTH_SHORT).show()
 
-        //add method B
-        
-        //john added method c
-    }
-    fun button1(view: View) {
-        var editTextHello = findViewById<EditText>(R.id.editTextPersonName)
-        Toast.makeText(this,editTextHello.text.toString(),Toast.LENGTH_SHORT).show()
-        findViewById<TextView>(R.id.txt1).setText(editTextHello.text)
     }
 
-    fun button3(view: View) {
-        var edit1 = findViewById<EditText>(R.id.editTextPersonName)
-        val intent = Intent(this, MainActivity2::class.java).apply {
-            putExtra(PARAM1_NAME, edit1.text.toString())
-        }
 
-        startActivity(intent)
+    override fun onResume() {
+        super.onResume()
+        Toast.makeText(this,R.string.mensagem,Toast.LENGTH_SHORT).show()
+
     }
+
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
@@ -45,22 +39,30 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
-            R.id.create_new -> {
-                Toast.makeText(this,"create_new", Toast.LENGTH_SHORT).show()
+            R.id.Clean -> {
+                 findViewById<EditText>(R.id.etPreco).setText("")
+                 findViewById<EditText>(R.id.etQuantidade).setText("")
+                 findViewById<TextView>(R.id.tvPreco).setText("")
+
                 true
-            }
-            R.id.opcao2 -> {
-                Toast.makeText(this,"opcao2", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.opcao3 -> {
-                Toast.makeText(this,"opcao3", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.opcao4 -> {
-                Toast.makeText(this,"opcao4", Toast.LENGTH_SHORT).show()
-                true
-            } else -> super.onOptionsItemSelected(item)
+            }else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun calculaPagamento(view: View) {
+        val editTextPreco = findViewById<EditText>(R.id.etPreco)
+        val editTextQuantidade = findViewById<EditText>(R.id.etQuantidade)
+        val checkBox = findViewById<CheckBox>(R.id.cbIva)
+        val tvPreco = findViewById<TextView>(R.id.tvPreco)
+
+        var precoFinal = 0.0
+        if(checkBox.isChecked){
+            precoFinal = (editTextPreco.text.toString().toFloat() + editTextQuantidade.text.toString().toFloat()) *  1.23
+        }else{
+            precoFinal =
+                (editTextPreco.text.toString().toFloat() + editTextQuantidade.text.toString().toFloat()).toDouble()
+        }
+
+        tvPreco.text = precoFinal.toString()
     }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LABSPARATESTE</string>
+    <string name="Clean">Clean</string>
+    <string name="botao">Button</string>
+    <string name="mensagem">Welcome To the APP</string>
+</resources>
