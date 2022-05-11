@@ -21,6 +21,7 @@
         android:layout_height="57dp"
         android:text="CheckBox"
         tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="282dp" />
+        tools:layout_editor_absoluteY="282dp"
+        android:onClick="checkboxClicked"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
